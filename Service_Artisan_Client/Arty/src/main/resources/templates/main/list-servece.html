@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"
+
+      xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>BRICOLE Home_Page-Artisan</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/dashboard/assets/img/B3.png" rel="icon">
+    <link href="/dashboard/assets/img/B3.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets_02/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets_02/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets_02/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets_02/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets_02/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets_02/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets_02/css/style.css" rel="stylesheet">
+
+    <style>
+        .team .member .member-info {
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- ======= Top Bar ======= -->
+
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <a href="/main/index" class="logo d-flex align-items-center me-auto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="/assets/img/logo.png" alt=""> -->
+            <h1 class="">BRICOLE</h1>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="/Artisan/index/#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="/Artisan/index/#why-us">About</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>Services</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="/main/index#services">Client Service</a></li>
+                        <li><a href="/Artisan/index#privilege">Artisan Privilege</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto " href="/Artisan/index#values">Savoir Plus</a></li>
+                <li><a class="nav-link scrollto" href="/Artisan/index/#team">Team</a></li>
+
+                <li class="dropdown">
+                    <a href="#">
+                        <span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/Artisan/index">Create a Service</a></li>
+                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Dropdown 2</a></li>
+                        <li><a href="/main/index#contact">Contact</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/login">Login</a></li>
+
+                <li><a class="btn-getstarted" href="/register">S'inscrire</a></li>
+
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav><!-- .navbar -->
+
+
+    </div>
+</header><!-- End Header -->
+
+
+
+<main id="main">
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container">
+
+            <div class="section-title">
+                <h2 th:text="${typeservice}"> data-aos="fade-up"></h2>
+                <p data-aos="fade-up">Bricole: La solution pour tous vos besoins.</p>
+            </div>
+
+            <div class="row justify-content-center">
+
+
+                <th:block th:each="artisan : ${artisans}">
+                <th:block th:each="service : ${artisan.getServices()}" >
+
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300" style="height: 265px;">
+                        <div class="member" >
+                            <div class="member-img">
+                                <img  th:src="@{'/images_Service/' + ${service.getImageFileName()}}" class="img-fluid" alt="" style="height: 160px; width: 250px;">
+                                <div class="social">
+                                    <a href="/assets/img/Elect1.png" title="Cable a terre" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </a>
+                                    <a href="/main/portfl_details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4 th:text="${artisan.getUserName()}">Youssef Len</h4>
+                                <span th:text="${service.getNameService()}"></span>
+                                <h4 style="  color: #ff5821;" th:text="${service.getMontantService()+ '$'}"></h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </th:block>
+
+
+                </th:block>
+
+
+                <!--*****************************************************************-->
+                
+            </div>
+
+        </div>
+    </section><!-- End Team Section -->
+
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="/assets_02/vendor/aos/aos.js"></script>
+<script src="/assets_02/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets_02/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets_02/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets_02/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets_02/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/assets_02/js/main.js"></script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vedd3670a3b1c4e178fdfb0cc912d969e1713874337387" integrity="sha512-EzCudv2gYygrCcVhu65FkAxclf3mYM6BCwiGUm6BEuLzSb5ulVhgokzCZED7yMIkzYVg65mxfIBNdNra5ZFNyQ==" data-cf-beacon='{"rayId":"87dc498f2cef2178","version":"2024.4.1","token":"68c5ca450bae485a842ff76066d69420"}' crossorigin="anonymous"></script>
+</body>
+
+</html>

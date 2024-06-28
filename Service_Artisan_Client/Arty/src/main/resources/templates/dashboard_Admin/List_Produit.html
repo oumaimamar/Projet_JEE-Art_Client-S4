@@ -1,0 +1,230 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"-->
+<!--      layout:decorate="/dashboard_Art/nav">-->
+
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!--  <meta content="width=device-width, initial-scale=1.0" name="viewport">-->
+
+<!--  <title>Product / List-Product</title>-->
+<!--  <meta content="" name="description">-->
+<!--  <meta content="" name="keywords">-->
+
+<!--  &lt;!&ndash; Favicons &ndash;&gt;-->
+<!--  <link href="/dashboard/assets/img/B3.png" rel="icon">-->
+<!--  <link href="/dashboard/assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+<!--  &lt;!&ndash; Google Fonts &ndash;&gt;-->
+<!--  <link href="https://fonts.gstatic.com" rel="preconnect">-->
+<!--  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">-->
+
+<!--  &lt;!&ndash; Vendor CSS Files &ndash;&gt;-->
+<!--  <link href="/dashboard/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+<!--  <link href="/dashboard/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">-->
+<!--  <link href="/dashboard/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">-->
+<!--  <link href="/dashboard/assets/vendor/quill/quill.snow.css" rel="stylesheet">-->
+<!--  <link href="/dashboard/assets/vendor/quill/quill.bubble.css" rel="stylesheet">-->
+<!--  <link href="/dashboard/assets/vendor/remixicon/remixicon.css" rel="stylesheet">-->
+<!--  <link href="/dashboard/assets/vendor/simple-datatables/style.css" rel="stylesheet">-->
+
+<!--  &lt;!&ndash; Template Main CSS File &ndash;&gt;-->
+<!--  <link href="/dashboard/assets/css/style.css" rel="stylesheet">-->
+
+<!--  <style>-->
+<!--    .btn-success {-->
+<!--      &#45;&#45;bs-btn-color: #fff;-->
+<!--      &#45;&#45;bs-btn-bg: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-border-color: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-hover-color: #fff;-->
+<!--      &#45;&#45;bs-btn-hover-bg: #eb5d1ed4;-->
+<!--      &#45;&#45;bs-btn-hover-border-color: #eb5d1ed4;-->
+<!--      &#45;&#45;bs-btn-focus-shadow-rgb: 60, 153, 110;-->
+<!--      &#45;&#45;bs-btn-active-color: #fff;-->
+<!--      &#45;&#45;bs-btn-active-bg: #eb5d1ed4;-->
+<!--      &#45;&#45;bs-btn-active-border-color: #f3703e;-->
+<!--      &#45;&#45;bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);-->
+<!--      &#45;&#45;bs-btn-disabled-color: #fff;-->
+<!--      &#45;&#45;bs-btn-disabled-bg: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-disabled-border-color: #eb5d1e;-->
+<!--    }-->
+
+<!--    .btn-outline-success {-->
+<!--      &#45;&#45;bs-btn-color: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-border-color: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-hover-color: #fff;-->
+<!--      &#45;&#45;bs-btn-hover-bg: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-hover-border-color: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-focus-shadow-rgb: 25, 135, 84;-->
+<!--      &#45;&#45;bs-btn-active-color: #fff;-->
+<!--      &#45;&#45;bs-btn-active-bg: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-active-border-color: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);-->
+<!--      &#45;&#45;bs-btn-disabled-color: #eb5d1e;-->
+<!--      &#45;&#45;bs-btn-disabled-bg: transparent;-->
+<!--      &#45;&#45;bs-btn-disabled-border-color: #eb5d1e;-->
+<!--      &#45;&#45;bs-gradient: none;-->
+<!--    }-->
+
+<!--  </style>-->
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--<div layout:fragment="content">-->
+<!--  -->
+
+<!-- -->
+<!--  &lt;!&ndash; ======= Header ======= &ndash;&gt;-->
+<!--         &lt;!&ndash; End Header &ndash;&gt;-->
+<!--&lt;!&ndash; ======= Sidebar ======= &ndash;&gt;-->
+<!--         &lt;!&ndash; End Sidebar&ndash;&gt;-->
+
+<!--&lt;!&ndash; ****************************************************************************************** &ndash;&gt;-->
+<!-- &lt;!&ndash; ************************************************************************************** &ndash;&gt;-->
+
+
+<!--  <main id="main" class="main">-->
+
+<!--    <div class="pagetitle">-->
+<!--      <h1>List Servive</h1>-->
+<!--      <nav>-->
+<!--        <ol class="breadcrumb">-->
+<!--          <li class="breadcrumb-item"><a href="/dashboard_Art/index">Home</a></li>-->
+<!--          <li class="breadcrumb-item active">My Service</li>-->
+<!--        </ol>-->
+<!--      </nav>-->
+<!--    </div>&lt;!&ndash; End Page Title &ndash;&gt;-->
+
+<!--    <section class="section">-->
+<!--      <div class="row">-->
+<!--        <div class="col-lg-12">-->
+
+<!--          <div class="card">-->
+<!--            <div class="card-body">-->
+<!--              <h5 class="card-title">Mes Services List</h5>-->
+<!--&lt;!&ndash;              <p>Every project generates and remains in progress.</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;              &lt;!&ndash; Table with stripped rows &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="container">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                <h1 class="text-center my-4">Our Services</h1>&ndash;&gt;-->
+
+<!--              <form method="get", th:action="@{produits}">-->
+<!--                <div class="form-row  mb-3">-->
+<!--                  <div class="col">-->
+<!--                    <input type="search" name="search" placeholder="Name Owner" th:value="${searchName}">-->
+<!--                    <button class="btn btn-outline-success" type="submit">-->
+<!--                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">-->
+<!--                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>-->
+<!--                      </svg>-->
+<!--                    </button>-->
+<!--                  </div>-->
+
+<!--                  <div class="col">-->
+<!--                    <div class="input-group">-->
+<!--                      <select class="select" name="secteurActivite" id="secteurActivite">-->
+<!--                        <option th:disabled="disabled" selected="true" value=""> Tout </option>-->
+<!--                        <option th:each="secteur : ${allSecteurActivites}" th:value="${secteur}" th:text="${secteur}"></option>-->
+<!--                      </select>-->
+<!--                      <button class="btn btn-outline-success" type="submit">Filtrer</button>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+
+<!--              </form>-->
+
+
+<!--&lt;!&ndash;                <a class="btn btn-success" href="/dashboard_Art/new_Service">Create Services</a>&ndash;&gt;-->
+
+<!--              <table class="table align-middle mb-0 bg-white">-->
+<!--                <thead class="bg-light">-->
+<!--                <tr>-->
+<!--                  <th scope="col">#id</th>-->
+<!--                  <th scope="col">name_prod</th>-->
+<!--                  <th scope="col">name_owner</th>-->
+<!--                  <th scope="col">secteur_activite</th>-->
+<!--                  <th scope="col">montant_prod</th>-->
+<!--                  <th scope="col">description</th>-->
+<!--                  <th scope="col">status</th>-->
+<!--                  <th scope="col">date_prod</th>-->
+<!--                  <th scope="col">Image</th>-->
+<!--                  <th scope="col">Action</th>-->
+
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                <tbody>-->
+<!--                <tr th:each=" p: ${produitPage}">-->
+<!--                  <th scope="row" th:text="${p.id}"></th>-->
+<!--                  <td th:text="${p.nameProd}"></td>-->
+<!--                  <td th:text="${p.nameOwner}"></td>-->
+<!--                  <td th:text="${p.secteurActivite}"></td>-->
+<!--                  <td th:text="@{${p.montantProd} + '$'}"></td>-->
+<!--                  <td style="width: 15px; " th:text="${p.description}"></td>-->
+<!--                  <td th:text="${p.Status}"></td>-->
+<!--                  <td th:text="${p.dateProd.toString().substring(0, 10)}"></td>-->
+<!--                  <td>-->
+<!--                    <img th:src="@{'/images/' + ${p.imageFileName}}" alt="..." width="100">-->
+<!--                  </td>-->
+<!--                  <td style="white-space:nowrap" >-->
+
+<!--                    <a class="btn btn-primary btn-sm"-->
+<!--                       th:href="@{/produits/edit( page=${currentPage}, size=${size} , search=${searchName},id=${p.id})}">Edit</a>-->
+
+<!--                    <a class="btn btn-danger btn-sm"-->
+<!--                       th:href="@{/produits/delete(page=${currentPage}, size=${size}, search=${searchName} ,id=${p.id})}"-->
+<!--                       onclick="return confirm('Are you sure?')">Delete</a>-->
+<!--                  </td>-->
+
+
+<!--                </tr>-->
+<!--                </tbody>-->
+<!--              </table>-->
+
+
+<!--              <div class="container">-->
+<!--                <ul class="nav nav-pills">-->
+<!--                  <li class="nav-item me-2"-->
+<!--                      th:each="pa:${tabPages}">-->
+<!--                    <a th:text="${pa+1}"-->
+<!--                       th:class="${pa==currentPage? 'btn btn-success' : 'btn btn-outline-success'}"-->
+<!--                       th:href="@{produits(page=${pa}, size=${size}, search=${searchName})}"></a>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </div>-->
+
+
+
+<!--              </div>-->
+<!--              &lt;!&ndash; End Table with stripped rows &ndash;&gt;-->
+
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<!--  </main>-->
+<!--  -->
+<!--  &lt;!&ndash; End #main &ndash;&gt;-->
+
+
+
+<!--  &lt;!&ndash; ************************************************************************************** &ndash;&gt;-->
+<!--&lt;!&ndash; ****************************************************************************************** &ndash;&gt;-->
+
+
+
+<!--  &lt;!&ndash; ======= Footer ======= &ndash;&gt;-->
+<!--  -->
+<!--  &lt;!&ndash; End Footer &ndash;&gt;-->
+
+<!--  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>-->
+<!--</div>-->
+<!--  &lt;!&ndash; Vendor JS Files &ndash;&gt;-->
+<!--  &lt;!&ndash; Template Main JS File &ndash;&gt;-->
+<!--  <script src="/dashboard/assets/js/main.js"></script>-->
+
+<!--</body>-->
+
+<!--</html>-->

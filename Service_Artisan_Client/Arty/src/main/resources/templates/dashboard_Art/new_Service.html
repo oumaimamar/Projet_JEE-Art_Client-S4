@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="/dashboard_Art/nav">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Forms / Elements - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+    <link href="/dashboard/assets/img/B3.png" rel="icon">
+  <link href="/dashboard/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/dashboard/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/dashboard/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/dashboard/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/dashboard/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/dashboard/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/dashboard/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/dashboard/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/dashboard/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+
+  ======================================================== -->
+
+    <style>
+        .btn-success {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: #eb5d1e;
+            --bs-btn-border-color: #eb5d1e;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #eb5d1ed4;
+            --bs-btn-hover-border-color: #eb5d1ed4;
+            --bs-btn-focus-shadow-rgb: 60, 153, 110;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #eb5d1ed4;
+            --bs-btn-active-border-color: #f3703e;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #fff;
+            --bs-btn-disabled-bg: #eb5d1e;
+            --bs-btn-disabled-border-color: #eb5d1e;
+        }
+
+        .btn-outline-success {
+            --bs-btn-color: #eb5d1e;
+            --bs-btn-border-color: #eb5d1e;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #eb5d1e;
+            --bs-btn-hover-border-color: #eb5d1e;
+            --bs-btn-focus-shadow-rgb: 25, 135, 84;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #eb5d1e;
+            --bs-btn-active-border-color: #eb5d1e;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #eb5d1e;
+            --bs-btn-disabled-bg: transparent;
+            --bs-btn-disabled-border-color: #eb5d1e;
+            --bs-gradient: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div layout:fragment="content">
+
+  <!-- ************************************************************************************* -->
+<!-- ************************************************************************************* -->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>New Services</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard_Art/index">Home</a></li>
+          <li class="breadcrumb-item"> <a href="/dashboard_Art/my_Service">Service</a></li>
+          <li class="breadcrumb-item active">New Service</li>
+        </ol>
+      </nav>
+    </div>
+    
+    <!-- End Page Title -->
+
+    <!-- ************************************************************************************* -->
+<!-- ************************************************************************************* -->
+
+
+    <section class="section">
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Create New Service </h5>
+
+              <!-- Advanced Form Elements -->
+          
+               
+                <div class="container">
+                  <div class="row">
+                      <div class="col-lg-10 mx-auto rounded border p-4 m-4">
+                          <!--<h2 class="text-center mb-5">New Service</h2> -->
+                          <form method="post" enctype="multipart/form-data" th:object="${serviceDto}" th:action="@{create}">
+              
+              
+                              <div class="row mb-3">
+                                  <label class="col-sm-4 col-form-label">name_Service</label>
+                                  <div class="col-sm-8">
+                                      <input class="form-control" th:field="${serviceDto.nameService}">
+                                      <p th:if="${#fields.hasErrors('nameService')}" th:errorclass="text-danger" th:errors="${serviceDto.nameService}"></p>
+                                  </div>
+                              </div>
+
+
+              
+                              <!--        "Mobilier","Décoration","Mode","Art" -->
+              <!--                "Electricien","Plombier","Depannage","Coiffeur" ,"Soudeur" , "Jardinier", "Mecanicien"-->
+              
+                              <div class="row mb-3">
+                                  <label class="col-sm-4 col-form-label">secteur_Activite</label>
+                                  <div class="col-sm-8">
+                                      <select class="form-select" th:field="${serviceDto.secteurActivite}">
+                                          <option value="" disabled selected >Quel Catégories ?</option>
+                                          <option value="Electricien">Electricien</option>
+                                          <option value="Plombier">Plombier</option>
+                                          <option value="Depannage">Depannage</option>
+                                          <option value="Coiffeur">Coiffeur</option>
+                                          <option value="Soudeur">Soudeur</option>
+                                          <option value="Jardinier">Jardinier</option>
+                                          <option value="Mecanicien">Mecanicien</option>
+                                      </select>
+                                      <p th:if="${#fields.hasErrors('secteurActivite')}" th:errorclass="text-danger" th:errors="${serviceDto.secteurActivite}"></p>
+                                  </div>
+                              </div>
+              
+                              <div class="row mb-3">
+                                  <label class="col-sm-4 col-form-label">montant_Service</label>
+                                  <div class="col-sm-8">
+                                      <input class="form-control" type="number" step="1" min="10" th:field="${serviceDto.montantService}">
+                                      <p th:if="${#fields.hasErrors('montantService')}" th:errorclass="text-danger" th:errors="${serviceDto.montantService}"></p>
+                                  </div>
+                              </div>
+              
+                              <div class="row mb-3">
+                                  <label class="col-sm-4 col-form-label">description_Metier</label>
+                                  <div class="col-sm-8">
+                                      <textarea class="form-control" th:field="${serviceDto.descriptionMertier}"></textarea>
+                                      <p th:if="${#fields.hasErrors('descriptionMertier')}" th:errorclass="text-danger" th:errors="${serviceDto.descriptionMertier}"></p>
+                                  </div>
+                              </div>
+
+                              <div class="row mb-3">
+                                <label class="col-sm-4 col-form-label">description_Service</label>
+                                <div class="col-sm-8">
+                                    <textarea class="form-control" th:field="${serviceDto.descriptionService}"></textarea>
+                                    <p th:if="${#fields.hasErrors('descriptionService')}" th:errorclass="text-danger" th:errors="${serviceDto.descriptionService}"></p>
+                                </div>
+                            </div>
+              
+                              <div class="row mb-3">
+                                  <label class="col-sm-4 col-form-label">status_Service</label>
+                                  <div class="col-sm-8">
+                                      <select class="form-select" th:field="${serviceDto.Status}">
+                                          <option value="" disabled selected>Disponibilite</option>
+                                          <option value="En stock">Disponible</option>
+                                          <option value="Limiter">En arret</option>
+                                      </select>
+                                      <p th:if="${#fields.hasErrors('Status')}" th:errorclass="text-danger" th:errors="${serviceDto.Status}"></p>
+                                  </div>
+                              </div>
+              
+                              <div class="row mb-3">
+                                  <label class="col-sm-4 col-form-label">Image</label>
+                                  <div class="col-sm-8">
+                                      <input class="form-control" type="file" th:field="${serviceDto.imageFile}">
+                                      <p th:if="${#fields.hasErrors('imageFile')}" th:errorclass="text-danger" th:errors="${serviceDto.imageFile}"></p>
+                                  </div>
+                              </div>
+
+                              <div class="row mb3">
+                                  <div class="offset-sm-4 col-sm-4 d-grid">
+                                      <button type="submit" class="btn btn-success">Submit</button>
+                                  </div>
+                                  <div class="col-sm-4 d-grid">
+                                      <button class="btn btn-outline-success" id="cancelButton" role="button">Cancel</button>
+                                  </div>
+                              </div>
+              
+              
+                          </form>
+                      </div>
+                  </div>
+              </div>
+              
+
+
+
+              <!-- End General Form Elements -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+ 
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+</div>
+  <!-- Vendor JS Files -->
+
+  <!-- Template Main JS File -->
+  <script src="/dashboard/assets/js/main.js"></script>
+
+</body>
+
+</html>
